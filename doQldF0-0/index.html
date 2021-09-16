@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>AppInventor制作APP过程中的调试 | 得劲滋润爽的资料库</title>
+<meta name="description" content="得劲滋润爽的资料库">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://djzrs.github.io/favicon.ico?v=1631761018695">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://djzrs.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://djzrs.github.io">
+        <img class="avatar" src="https://djzrs.github.io/images/avatar.png?v=1631761018695" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://djzrs.github.io">
+        <h1 class="site-title">得劲滋润爽的资料库</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151711528.png')">
+            </div>
+          
+          <h2 class="post-title">AppInventor制作APP过程中的调试</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-09-16</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://djzrs.github.io/Ge1Bna2Fd/">
+                    调试
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/MnrCesmxhx/">
+                    模拟器
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/4QuFT57uv9/">
+                    夜神
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/qYXsYU4zKP/">
+                    雷电
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/uQ2Q-6afFc/">
+                    手游助手
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/N3b-n7madV/">
+                    网易mumu
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/uqrxvZF9x/">
+                    APPinventor
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/vEObKm4fgh/">
+                    APP
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/BjHvGHiQXt/">
+                    安卓
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/2iuCjqXOsf/">
+                    图形化
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/9hRe8Pa_nQ/">
+                    Google
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/pHrvi8kZmO/">
+                    blockly
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/8G8nGXivsk/">
+                    浏览器
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/Bq4duxLsip/">
+                    Chrome
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/fss2bOtQ2q/">
+                    edge
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/vHrcWPymg9/">
+                    开发
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/b_iDi8UFU5/">
+                    教程
+                    
+                      ，
+                    
+                  </a>
+                
+                  <a href="https://djzrs.github.io/KZl0zWdG2w/">
+                    分享
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content">
+            <h1 id="appinventor制作app过程中的调试">AppInventor制作APP过程中的调试</h1>
+<hr>
+<h2 id="一-真机调试">一、真机调试</h2>
+<p>真机就是使用可以正常使用的真实的安卓手机。</p>
+<h3 id="1-下载ai伴侣调试助手ai在这里是appinventor的缩写不是人工智能的缩写">1、下载AI伴侣（调试助手）（AI在这里是AppInventor的缩写，不是人工智能的缩写）</h3>
+<figure data-type="image" tabindex="1"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151711528.png" alt="image-20210915171104409" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151713624.png" alt="image-20210915171335533" loading="lazy"></figure>
+<p><strong>如果扫描不了，需要先下载到电脑然后用微信，QQ啥的发送到手机上</strong></p>
+<h3 id="2-在手机安装即可这里就不写安装的教程了">2、在手机安装即可（这里就不写安装的教程了）</h3>
+<h3 id="3-打开ai伴侣">3、打开AI伴侣</h3>
+<h3 id="4-扫码连接调试">4、扫码连接调试</h3>
+<figure data-type="image" tabindex="3"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151722988.png" alt="" loading="lazy"></figure>
+<p><strong>点击之后会弹出一个显示连接信息的窗口</strong></p>
+<figure data-type="image" tabindex="4"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151725003.png" alt="image-20210915172459895" loading="lazy"></figure>
+<p>下图为手机上操作</p>
+<figure data-type="image" tabindex="5"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151728577.png" alt="" loading="lazy"></figure>
+<p>下图为手机上操作</p>
+<figure data-type="image" tabindex="6"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161024669.png" alt="image-20210916102438336" loading="lazy"></figure>
+<h2 id="二-安卓模拟器调试">二、安卓模拟器调试</h2>
+<h3 id="1-下载ai伴侣调试助手ai在这里是appinventor的缩写不是人工智能的缩写-2">1、下载AI伴侣（调试助手）（AI在这里是AppInventor的缩写，不是人工智能的缩写）</h3>
+<figure data-type="image" tabindex="7"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151711528.png" alt="image-20210915171104409" loading="lazy"></figure>
+<figure data-type="image" tabindex="8"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151716635.png" alt="image-20210915171605555" loading="lazy"></figure>
+<h3 id="2-安装ai伴侣">2、安装AI伴侣</h3>
+<p>这里以夜神模拟器进行演示，其他模拟器如网易的木木，腾讯的手游助手，雷电模拟器，海马什么的都大同小异</p>
+<p>首先保证你的电脑上已经有AI伴侣的安装包了。</p>
+<figure data-type="image" tabindex="9"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161033568.png" alt="image-20210916103359354" loading="lazy"></figure>
+<figure data-type="image" tabindex="10"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161035097.png" alt="image-20210916103538964" loading="lazy"></figure>
+<h3 id="3-打开ai伴侣-2">3、打开AI伴侣</h3>
+<figure data-type="image" tabindex="11"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161036631.png" alt="image-20210916103618530" loading="lazy"></figure>
+<h3 id="4-复制编码进行连接调试">4、复制编码进行连接调试</h3>
+<figure data-type="image" tabindex="12"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109151722988.png" alt="" loading="lazy"></figure>
+<p><strong>点击之后会弹出一个显示连接信息的窗口</strong></p>
+<figure data-type="image" tabindex="13"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161040813.png" alt="image-20210916104029728" loading="lazy"></figure>
+<figure data-type="image" tabindex="14"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161041954.png" alt="image-20210916104102835" loading="lazy"></figure>
+<figure data-type="image" tabindex="15"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161042789.png" alt="image-20210916104249674" loading="lazy"></figure>
+<figure data-type="image" tabindex="16"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161044470.png" alt="image-20210916104428370" loading="lazy"></figure>
+<figure data-type="image" tabindex="17"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161048445.png" alt="image-20210916104805207" loading="lazy"></figure>
+<figure data-type="image" tabindex="18"><img src="https://cdn.jsdelivr.net/gh/roampicgo/roamimg/imgroamedit/202109161048706.png" alt="image-20210916104846537" loading="lazy"></figure>
+<p><a href="https://djzrs.github.io/y6h3hN6wX/">启动APPinventor</a></p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://djzrs.github.io/y6h3hN6wX/">
+              <h3 class="post-title">
+                下一篇：启动AppInventor
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">得劲滋润爽的资料库</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://djzrs.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
