@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>树莓派 | 得劲滋润爽的资料库</title>
+<meta name="description" content="得劲滋润爽的资料库">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://djzrs.github.io/favicon.ico?v=1631764574722">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://djzrs.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://djzrs.github.io">
+        <img class="avatar" src="https://djzrs.github.io/images/avatar.png?v=1631764574722" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://djzrs.github.io">
+        <h1 class="site-title">得劲滋润爽的资料库</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+          <h2 class="post-title">树莓派</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-03-17</span>
+            
+          </div>
+          <div class="post-content">
+            <p>✅官方系统安装工具<br>
+<img src="https://djzrs.github.io/post-images/1615996817531.png" alt="" loading="lazy"><br>
+地址：https://www.raspberrypi.org/software/</p>
+<p>✅系统下载地址：https://www.raspberrypi.org/software/operating-systems/<br>
+桌面+常用软件完整版：https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2021-01-12/2021-01-11-raspios-buster-armhf-full.zip<br>
+桌面版：https://downloads.raspberrypi.org/raspios_armhf/images/raspios_armhf-2021-01-12/2021-01-11-raspios-buster-armhf.zip<br>
+不含桌面迷你版：https://downloads.raspberrypi.org/raspios_lite_armhf/images/raspios_lite_armhf-2021-01-12/2021-01-11-raspios-buster-armhf-lite.zip</p>
+<p>✅安装系统到SD卡：<img src="https://djzrs.github.io/post-images/1615997930430.png" alt="" loading="lazy"></p>
+<figure data-type="image" tabindex="1"><img src="https://djzrs.github.io/post-images/1615997940530.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://djzrs.github.io/post-images/1615997971792.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="3"><img src="https://djzrs.github.io/post-images/1615997994827.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="4"><img src="https://djzrs.github.io/post-images/1615997983215.png" alt="" loading="lazy"></figure>
+<p>✅拔掉读卡器再次插入电脑，写入SSH文件和配置连接无线网文件等<br>
+https://shumeipai.nxez.com/2017/02/27/raspbian-ssh-connection-refused.html<br>
+<img src="https://djzrs.github.io/post-images/1615997814694.png" alt="" loading="lazy"><br>
+https://shumeipai.nxez.com/hot-explorer#beginner</p>
+<p>✅换国内软件源（putty）<br>
+在命令行窗口内输入 sudo nano /etc/apt/sources.list 并回车，进入编辑器。<img src="https://djzrs.github.io/post-images/1616258215819.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616258278184.png" alt="" loading="lazy"><br>
+按下键光标移到最下面，按回撤键删除原内容，复制新源粘贴。(点击鼠标右键就是粘贴)<br>
+新源，清华源：# 编辑 <code>/etc/apt/sources.list</code> 文件，删除原文件所有内容，用以下内容取代：<br>
+deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi<br>
+deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ buster main non-free contrib rpi</p>
+<h1 id="编辑-etcaptsourceslistdraspilist-文件删除原文件所有内容用以下内容取代">编辑 <code>/etc/apt/sources.list.d/raspi.list</code> 文件，删除原文件所有内容，用以下内容取代：</h1>
+<p>deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui</p>
+<p>参考链接：https://mirror.tuna.tsinghua.edu.cn/help/raspbian/<br>
+https://shumeipai.nxez.com/2013/08/31/raspbian-chinese-software-source.html</p>
+<p><img src="https://djzrs.github.io/post-images/1616258476059.png" alt="" loading="lazy"><br>
+Ctrl+O然后回车保存。Ctrl+X退出编辑。<img src="https://djzrs.github.io/post-images/1616258643095.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616258651468.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616258657581.png" alt="" loading="lazy"></p>
+<p>使用上面的方法步骤把 /etc/apt/sources.list.d/raspi.list 文件也替换了。 sudo nano /etc/apt/sources.list.d/raspi.list</p>
+<p><img src="https://djzrs.github.io/post-images/1616259288706.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259301499.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259310487.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259319780.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259326354.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259331960.png" alt="" loading="lazy"></p>
+<p>✅更新软件与系统<br>
+#更新软件源列表<br>
+sudo apt-get update<br>
+#更新软件版本<br>
+sudo apt-get upgrade<br>
+sudo apt-get dist-upgrade<br>
+#更新系统内核<br>
+sudo rpi-update</p>
+<p><img src="https://djzrs.github.io/post-images/1616259466832.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259476340.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616259484399.png" alt="" loading="lazy"></p>
+<p><img src="https://djzrs.github.io/post-images/1616260365682.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260372518.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260378058.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260384012.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260435267.png" alt="" loading="lazy"></p>
+<p>✅树莓派安装远程桌面</p>
+<p>就一句命令：sudo apt-get install xrdp<br>
+<img src="https://djzrs.github.io/post-images/1616260662699.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260669719.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260676867.png" alt="" loading="lazy"></p>
+<p><img src="https://djzrs.github.io/post-images/1616260929219.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260935022.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1616260940729.png" alt="" loading="lazy"></p>
+<p>参考链接：https://shumeipai.nxez.com/2013/10/06/windows-remote-desktop-connection-raspberry-pi.html</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://djzrs.github.io/yi-kuan-xian-shi-jian-pan-he-shu-biao-cao-zuo-yong-de-ruan-jian-keycastow/">
+              <h3 class="post-title">
+                下一篇：【教程】KeyCastOW-屏幕显示输入信息【键盘提示、鼠标提示】
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">得劲滋润爽的资料库</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://djzrs.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>

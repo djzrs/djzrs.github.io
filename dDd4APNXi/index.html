@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>node-red设置面板登录密码 | 得劲滋润爽的资料库</title>
+<meta name="description" content="得劲滋润爽的资料库">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://djzrs.github.io/favicon.ico?v=1631764574722">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://djzrs.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://djzrs.github.io">
+        <img class="avatar" src="https://djzrs.github.io/images/avatar.png?v=1631764574722" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://djzrs.github.io">
+        <h1 class="site-title">得劲滋润爽的资料库</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://djzrs.github.io/post-images/dDd4APNXi.png')">
+            </div>
+          
+          <h2 class="post-title">node-red设置面板登录密码</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2021-05-19</span>
+            
+          </div>
+          <div class="post-content">
+            <p>node-red设置面板登录密码<br>
+树莓派上操作截图</p>
+<p><img src="https://djzrs.github.io/post-images/1621364687480.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1621364707683.png" alt="" loading="lazy"></p>
+<p>❤️❤️❤️这一步需要在Windows上操作</p>
+<p><img src="https://djzrs.github.io/post-images/1621364727208.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1621364735082.png" alt="" loading="lazy"><br>
+<img src="https://djzrs.github.io/post-images/1621364742954.png" alt="" loading="lazy"></p>
+<p>r919686742 2019-05-31 16:15:50  4450  收藏 15<br>
+分类专栏： node-red学习 文章标签： node-red lot 物联网<br>
+版权<br>
+众所周知<br>
+，node-red的面板是没有密码的，如果你在本地电脑使用倒没啥问题，如果是在服务器上开发可能就需要考虑安全性问题。在此我以本地电脑为例，一步一步设置登录密码。我用的是windows系统，linux的操作其实也是一样的。<br>
+我这里主要是参考了官方的文档：node-red官方文档<br>
+第一步：找到你的node-red的</p>
+<p>settings.js文件</p>
+<p>怎么找呢？起初我以为是node-red根目录下的文件，但是修改配置后不起作用</p>
+<p>后来，我在启动node-red的时候无意中看到了一个东西</p>
+<p>后来按图索骥，来到了这个文件目录下（linux就在root根目录下，打开node-red的时候也能看到，用VIM编辑器就能打开修改）</p>
+<p>同样看到了一个settings.js文件，我们用notepad打开它然后找到这个代码块</p>
+<p>将其注释取消掉然后保存</p>
+<p>启动node-red</p>
+<p>打开面板</p>
+<p>可以看到，这里已经出现登录提示了，用户名就是下面的admin，但是密码不是password，这段密文是经过bcrypt algorithm加密的，所以我们要用自己的明文密码生成一段密文，然后粘贴到这个地方</p>
+<p>adminAuth: {<br>
+type: &quot;credentials&quot;,<br>
+users: [{<br>
+username: &quot;admin&quot;,<br>
+password: &quot;$2a<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mn>08</mn></mrow><annotation encoding="application/x-tex">08</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span><span class="mord">8</span></span></span></span>zZWtXTja0fB1pzD4sHCMyOCMYz2Z6dNbM6tl8sJogENOMcxWV9DN.&quot;,<br>
+permissions: &quot;*&quot;<br>
+}]<br>
+}<br>
+1<br>
+2<br>
+3<br>
+4<br>
+5<br>
+6<br>
+7<br>
+8<br>
+来到node-red的安装目录，输入这段代码</p>
+<p>node -e &quot;console.log(require('bcryptjs').hashSync(process.argv[1], 8));&quot; 你要设置的密码<br>
+1</p>
+<p>得到一串密文，复制这段密文，粘贴到之前要修改的那段代码的：password处</p>
+<p>保存，然后启动node-red，输入密码beijing22222，登录成功</p>
+<p>————————————————<br>
+版权声明：本文为CSDN博主「r919686742」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/r919686742/article/details/90718308</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://djzrs.github.io/shu-mei-pai-an-zhuang-yuan-cheng-zhuo-mian/">
+              <h3 class="post-title">
+                下一篇：树莓派安装远程桌面
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">得劲滋润爽的资料库</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://djzrs.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
